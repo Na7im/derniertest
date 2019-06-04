@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "*";
+var prefix = "!!";
 
 client.login(process.env.TOKEN);
 
@@ -89,3 +89,10 @@ client.on('message', function (message) {
         }
     }
 })
+
+client.on('message', message =>{
+    if(message.content === prefix + "ip"){
+        message.reply('ip du serveur : play.fackindgoms.tk (serveur en dev)');
+        console.log('ip');
+    }
+});
