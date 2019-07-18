@@ -4,19 +4,11 @@ var prefix = "!!";
 
 client.login(process.env.TOKEN);
 
-client.on('message', message =>{
-    if(message.content === "Bienvenue"){
-        message.reply('Merci à toi de souhaitez la bienvenue au nouveau membres !');
-        console.log('répond au bienvenue');
-    }
-});
-
-
 client.on('guildMemberAdd', member =>{
     let embed = new Discord.RichEmbed()
         .setDescription(':tada: **' +member.user.username + '** a rejoint le discord ' + member.guild.name)
         .setFooter('Nous somme désormais ' + member.guild.memberCount )
-    member.guild.channels.get('585152944937107457').send(embed)
+    member.guild.channels.get('598788322541961227').send(embed)
 
 });
 
